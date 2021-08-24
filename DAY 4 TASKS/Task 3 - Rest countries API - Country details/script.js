@@ -10,6 +10,7 @@ xhr.onload = function () {
         subregion : country.subregion, 
         population: country.population
       };
+      //Storing all the required details in an object and printing it in console.
       console.log(details);
     });
   } else {
