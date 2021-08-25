@@ -7,13 +7,16 @@
     })
 })([1, 2, 3, 4, 5]); // returns 1 3 5
 
-// b. Converting all the strings in the array to toUpperCase.
-(function(arr){
-    let captalized = arr.map(ele => {
-        return ele = ele.toUpperCase();
-    })
-    console.log(captalized);
-})(["a", "b", "c", "d", "e"]); // returns ["A", "B", "C", "D", "E"]
+// b. Converting all the strings in the array to titlecase.
+(function(str){
+    let arr = []; 
+    str.split(' ').forEach(word => {
+        let d = word.split("");
+        d[0] = d[0].toUpperCase();
+        arr.push(d.join(""));
+    });
+    console.log(arr.join(" "));
+})("i am ironman"); // returns I Am Ironman
 
 // c. Finding the sum of all the numbers in the array.
 (function(arr){
