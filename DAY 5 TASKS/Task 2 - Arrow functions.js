@@ -8,14 +8,17 @@ let findOdd = (arr) => {
 }
 findOdd([2, 5, 6, 7, 8, 4]); // returns 5 7
 
-// b. Converting all the strings in the array to toUpperCase.
-let convertToUpperCase = (arr) => {
-    let captalized = arr.map(ele => {
-        return ele = ele.toUpperCase();
-    })
-    console.log(captalized);
+// b. Converting all the strings in the array to titleCase.
+let convertToTitleCase = (str) => {
+    let arr = []; 
+    str.split(' ').forEach(word => {
+        let d = word.split("");
+        d[0] = d[0].toUpperCase();
+        arr.push(d.join(""));
+    });
+    console.log(arr.join(" "));
 }
-convertToUpperCase(["i", "r", "o", "n", "m", "a", "n"]); // returns ["I", "R", "O", "N", "M", "A", "N"]
+convertToTitleCase("i am ironman"); // returns I Am Ironman
 
 // c. Finding the sum of all the numbers in the array.
 let findSum = (arr) => {
