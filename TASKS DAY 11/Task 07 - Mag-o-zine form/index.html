@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div>
+        <form action="">
+            <table cellspacing="7">
+                <tr> <!-- Table row for Heading -->
+                    <th class="heading" colspan="6">Yes! I want to subscribe to Mag-O-Zine</th>
+                </tr>
+                <tr> <!-- Table row for Name -->
+                    <td colspan="3">
+                        <input type="text" name="firstname" id="firstname"/><br>
+                        <label for="firstName">First Name</label>
+                    </td>
+                    <td colspan="3">
+                        <input type="text" name="lastname" id="lastname"/><br>
+                        <label for="lastName">Last Name</label>
+                    </td>
+                </tr>
+                <tr> <!-- Table row for Address -->
+                    <td class="address" colspan="6">
+                        <input type="text" name="address" id="address"/> <br>
+                        <lable for="address">Address</lable>
+                    </td>
+                </tr>
+                <tr> <!-- Table row for Address Details -->
+                    <td colspan="2">
+                        <input type="text" name="city" id="city"/><br>
+                        <label for="city">City</label>
+                    </td>
+                    <td colspan="2">
+                        <input type="text" name="state" id="state"/><br>
+                        <label for="state">State</label>
+                    </td>
+                    <td colspan="2">
+                        <input type="text" name="Zip" id="Zip"/><br>
+                        <label for="zip">Zip</label>
+                    </td>
+                </tr>
+                <tr> <!-- Table row for Subscription Details -->
+                    <td colspan="2">
+                        <strong>Subscribe For :</strong>
+                    </td>
+                    <td colspan="2">
+                        <input type="checkbox" name="year" id="Year" onclick="onlyOne(this)"/>
+                        <label for="year">1 Year ($19.95)</label>
+                    </td>
+                    <td colspan="2">
+                        <input type="checkbox" name="year" id="Year" onclick="onlyOne(this)"/>
+                        <label for="year">2 Years ($35.00)</label>
+                    </td>
+                </tr>
+                <tr> <!-- Table row for More Informations -->
+                    <td colspan="6"><strong>Send me more information about :</strong></td>
+                </tr>
+                <tr>
+                    <td colspan="6">
+                        <input type="checkbox" name="info" id="info" />
+                        <label for="info"><strong>Computer-Zine</strong></label>
+                    </td>    
+                </tr>
+                <tr>
+                    <td colspan="6">
+                        <input type="checkbox" name="info" id="info" />
+                        <label for="info"><strong>Fishing-Zine</strong></label>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="6">
+                        <input type="checkbox" name="info" id="info" />
+                        <label for="info"><strong>Cat-O-Zine</strong></label>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
+<script>
+    function onlyOne(checkbox) {
+        var checkboxes = document.getElementsByName("year");
+        checkboxes.forEach((item) => {
+            if (item !== checkbox) item.checked = false
+        });
+    }
+</script>
+</html>
