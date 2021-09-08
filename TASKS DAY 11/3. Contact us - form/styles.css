@@ -1,0 +1,11 @@
+input {
+    margin-left: 50px;
+    margin-top: 20px;
+    width: 230px;
+}
+textarea, button {
+    margin-top: 20px;
+}
+#forMessage {
+    vertical-align: 140px;
+}
