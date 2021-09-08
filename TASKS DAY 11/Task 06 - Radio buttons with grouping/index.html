@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header>
+      <div>
+        <h1>Employee details</h1>
+      </div>
+    </header>
+    <div>
+      <form action="">
+          <table cellspacing="10">
+              <tr> <!-- Table row for employee name -->
+                  <td><label for="name">Employee name</label> </td>
+                  <td><span>: </span><input type="text" name="name" id="name"/> <br></td>
+              </tr>
+              <tr> <!-- Table row for employee Email -->
+                  <td><label for="email">Employee email</label> </td>
+                  <td><span>: </span><input type="email" name="email" id="email"/> <br></td>
+              </tr>
+              <tr> <!-- Table row for employee phone number -->
+                  <td><label for="phone">Phone number</label> </td>
+                  <td><span>: </span><input type="phone" name="phone" id="phone"/> <br></td>
+              </tr>
+              <tr> <!-- Table row for employee Profession -->
+                  <td><label for="profession">Profession</label></td>
+                  <td><span>: </span><input type="text" name="profession" id="profession"/> <br></td>
+              </tr>
+              <tr> <!-- Table row for employee type -->
+                  <td><label for="employeeType">Employee type</label></td>
+                  <td>
+                    <span>: </span>
+                    <input type="radio" name="employeeType" id="salaried" value="Salaried"/>
+                    <label for="salaried">Salaried</label>
+                    <input type="radio" name="employeeType" id="buisness" value="Own buisness"/>
+                    <label for="buisness">Own Buisness</label>
+                  </td>
+              </tr>
+              <tr> <!-- Table row for any comments -->
+                  <td><label for="comments">Comments / Message</label></td>
+                  <td><span style="vertical-align: top">: </span><textarea name="comments" id="comments" cols="30" rows="7"></textarea> <br></td>
+              </tr>
+              <tr> <!-- Table row for submit button -->
+                  <td><button type="submit">Submit</button></td>
+              </tr>
+          </table>
+      </form>
+    </div>
+  </body>
+</html>
