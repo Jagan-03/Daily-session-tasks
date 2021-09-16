@@ -1,0 +1,59 @@
+.news-cont {
+    text-align: justify;
+}
+.paper-head {
+    font-family: 'DM Serif Display', serif;
+    font-size: 8vw;
+}
+.heading {
+    font-size: 8vw;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    transition: .1s;
+    background-image: url(./img//bg-2.jpg);
+    background-repeat: repeat;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+    -webkit-font-smoothing: antialiased;
+}
+.news-head {
+    font-size: 2vw;
+    font-family: "'Times New Roman', Times, serif";
+    font-weight: bold;
+    transition: .1s;
+}
+.news-para {
+    font-size: 1vw;
+    font-family: "'Times New Roman', Times, serif";
+    transition: .1s;
+}
+@media (max-width: 1000px) {
+    .heading {
+        font-size: 6vw;
+    }
+}
+@media (max-width: 980px){
+    .news-head {
+        font-size: 3vw;
+    }
+    .news-para, .info {
+        font-size: 1.8vw;
+    }
+}
+.badge {
+    width: 8vw;
+    min-width: 100px;
+    height: 30px;
+    background: rgb(131, 3, 3);
+    font-size: large;
+    transform: skewX(-10deg);
+}
+.snips {
+    color: rgb(131, 3, 3);
+    text-align: center;
+}
+li {
+    list-style: none;
+}
