@@ -1,1 +1,1 @@
-daily-football-news.netlify.app
+https://daily-football-news.netlify.app/
