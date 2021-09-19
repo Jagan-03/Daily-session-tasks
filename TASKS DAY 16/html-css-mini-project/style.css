@@ -1,0 +1,137 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;   
+}
+
+body {
+    background-color: rgb(17, 16, 16);
+}
+/* Navigation */
+.fa-home {
+    color: white;
+}
+.fa-home:hover {
+    color: #dc3545;
+}
+.header {
+    /* font-family: 'Bangers', cursive; */
+    font-family: 'Bebas Neue', cursive;
+    /* font-family: 'Bowlby One SC', cursive; */
+}
+.nav-item, .nav-link {
+    color: black;
+    transition: .5s;
+}
+.nav-item:hover {
+    background-color: black;
+    transition: .5s;
+}
+.nav-link:hover {
+    color: white;
+}
+
+/* index.html */
+.mask {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+.table-snips-head {
+    font-family: 'Bebas Neue', cursive;
+    color: white;
+    letter-spacing: 5px;
+}
+.home-link {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 20px;
+    color: white;
+}
+@media (max-width: 1060px){
+    .forNews img{
+        height: 90%;
+    }
+    .forNews h6, .forNews p{
+        font-size: 2vw;
+    }
+}
+
+/* scores.html */
+.league-name {
+    background-color: rgb(226, 223, 223);
+    font-family: 'Bebas Neue', cursive;
+    letter-spacing: 5px;
+}
+.match-name {
+    border-bottom: 1px solid rgb(226, 223, 223);
+}
+.badge {
+    background-color: #FFA900;
+    height: 25px;
+}
+
+/* top-rated-players.html */
+.player-col {
+    position: relative;
+    transition: .5s;
+    overflow: hidden;
+    margin-top: 50px;
+}
+.player-col:hover {
+    letter-spacing: 5px;
+    transition: .5s;
+}
+.player-img {
+    width: 60%;
+    transition: .5s;
+}
+.player-rank {
+    position: absolute;
+    left: 100px;
+    font-size: 10vw;
+    color: rgba(0, 0, 0, 0.6);
+    -webkit-text-stroke: 3px white;
+}
+.player-name {
+    position: absolute;
+    bottom: 0;
+    font-size: 3vw;
+    font-family: 'Bebas Neue', cursive;
+    color: white;
+    -webkit-text-stroke: 1px black;
+}
+@media (max-width: 994px) {
+    .player-name {
+        font-size: 6.5vw;
+    }
+    .player-rank {
+        left: 30%;
+    }
+}
+
+/* top-scrorers.html */
+.scorers-link {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.scorers-link:hover {
+    color: black;
+}
+
+/* transfers.html */
+.head-cont {
+    background-color: rgb(226, 223, 223);
+}
+.heading {
+    font-family: 'Bebas Neue', cursive;
+    letter-spacing: 5px;
+    font-size: 30px;
+}
+
+/* Allteams.html*/
+.team-names {
+    font-family: 'Bebas Neue', cursive;
+}
+
+/* european.html */
+.table-head a {
+    font-family: 'Bebas Neue', cursive;
+    letter-spacing: 5px;
+}

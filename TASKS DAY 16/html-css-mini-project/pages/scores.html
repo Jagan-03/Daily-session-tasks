@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SCORES & FIXTURES</title>
+    <!-- Google fonts CDN -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bangers&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bowlby+One+SC&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+      rel="stylesheet"
+    />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- MDB -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.css"
+      rel="stylesheet"
+    />
+    <!-- Local stylesheet -->
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+
+  <body onload="updateFixtures()">
+    <div class="container-fluid">
+      <!-- Navbar -->
+      <div class="row">
+        <div class="col-lg-12 p-3">
+          <a href="/index.html">
+            <i class="fas fa-home fa-lg mx-3"></i>
+            <span class="text-light fst-italic fw-bold">FOOTBALL NEWS</span></a>
+        </div>
+        <div class="col-lg-12 bg-warning">
+          <!-- collapsible nav -->
+          <nav class="navbar navbar-expand-lg navbar-light p-0">
+            <div class="container-fluid">
+          <!-- Toggle button -->
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-mdb-toggle="collapse"
+            data-mdb-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+          <i class="fas fa-bars"></i>
+          </button>
+          <!-- collapsible wrapper -->
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="nav d-flex align-items-center">
+                <li class="nav-item border-end border-dark bg-black"><a href="scores.html" class="nav-link text-light">Scores & Fixtures</a></li>
+                <li class="nav-item border-end border-dark"><a href="tables.html" class="nav-link">Tables</a></li>
+                <li class="nav-item border-end border-dark"><a href="top-rated-players.html" class="nav-link">Top Rated Players</a></li>
+                <li class="nav-item border-end border-dark"><a href="top-scorers.html" class="nav-link">Top Scorers</a></li>
+                <li class="nav-item border-end border-dark"><a href="transfers.html" class="nav-link">Transfers</a></li>
+                <li class="nav-item border-end border-dark"><a href="all-teams.html" class="nav-link">Top European Teams</a></li>
+                <li class="nav-item border-end border-dark"><a href="leagues.html" class="nav-link">Leagues & Cups</a></li>
+                <li class="nav-item border-end border-dark"><a href="european.html" class="nav-link">European</a></li>
+                <li class="nav-item border-end border-dark"><a href="women.html" class="nav-link">Women</a></li>
+            </ul>
+          </div>
+          <!-- collapsible wrapper -->
+        </div>
+      </nav>
+      <!-- collapsible nav -->
+        </div>
+      </div>
+
+      <!-- Jumbotron -->
+      <div class="d-flex align-items-center p-4">
+        <h1 class="mb-3 header text-light">Football Scores & Fixtures</h1>
+      </div>
+      </div>
+
+      <div class="container-fluid">
+        <div class="row scores-main-content">
+          <!-- Main body content -->
+        </div>
+      </div>
+
+  </body>
+
+  <!-- MDB -->
+  <script
+    type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.js"
+  ></script>
+  <script src="/script.js"></script>
+</html>
