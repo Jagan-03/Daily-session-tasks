@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: rgb(73, 73, 73);
+}
+.main {
+    height: 700px;
+}
+.flex-child {
+    flex: 1;
+    margin: 1px;
+    padding: 10px;
+}
+.calculator {
+    border-radius: 10px;
+    padding: 5px;
+    min-width: 300px;
+}
+.display {
+    height: 150px;
+    color: white;
+}
+.num-key {
+    background-color: black;
+}
+.num-key:hover, .op-key:hover, .delete-key:hover, .remove-key:hover {
+    background-color: rgba(255, 255, 255, 0.575);
+}
+.op-key {
+    background-color: black;
+}
+
+.memory-tab {
+    height: 430px;
+}
