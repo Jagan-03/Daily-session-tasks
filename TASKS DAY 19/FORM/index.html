@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet"/>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet"/>
+    <!-- MDB -->
+    <link  href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  
+  <body onload="getList()">
+    
+    <div class="container d-flex justify-content-center p-5">
+
+        <table class="table table-sm rounded border">
+            <thead>
+                <tr>
+                    <th>First Name</th>
+                    <td><input type="text" name="fname" id="fname"></td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>Last Name</th>
+                    <td><input type="text" name="lname" id="lname"></td>
+                </tr>
+                <tr>
+                    <th>Address</th>
+                    <td><input type="text" name="address" id="address"></td>
+                </tr>
+                <tr>
+                    <th>Pincode</th>
+                    <td><input type="text" name="zip" id="zip" inputmode="numeric"></td>
+                </tr>
+                <tr>
+                    <th>Gender</th>
+                    <td class="d-flex align-items-center"><input class="mx-2" type="radio" name="gender" id="male" value="Male">Male</input>
+                    <input class="mx-2" type="radio" name="gender" id="female" value="Female">Female</input></td>
+                </tr>
+                <tr>
+                    <th>Food</th>
+                    <td class="d-flex align-items-center">
+                        <input type="checkbox" class="mx-2 food" id="food" name="Tacos" value="Tacos">
+                        <label for="vehicle1" class="mx-2"> Tacos</label><br>
+                        <input type="checkbox" class="mx-2 food" id="food" name="Biriyani" value="Biriyani">
+                        <label for="vehicle2" class="mx-2"> Biriyani</label><br>
+                        <input type="checkbox" class="mx-2 food" id="food" name="Steak" value="Steak">
+                        <label for="vehicle3" class="mx-2"> Steak</label>
+                        <input type="checkbox" class="mx-2 food" id="food" name="Pizza" value="Pizza">
+                        <label for="vehicle2" class="mx-2"> Pizza</label><br>
+                        <input type="checkbox" class="mx-2 food" id="food" name="Burger" value="Burger">
+                        <label for="vehicle2" class="mx-2"> Burger</label><br>
+                    </td>
+                </tr>
+                <tr>
+                    <th>State</th>
+                    <td><input type="text" name="state" id="state"></td>
+                </tr>
+                <tr>
+                    <th>Country</th>
+                    <td><input type="text" name="country" id="country"></td>
+                </tr>
+                <tr id="btna">
+                    <td colspan="2">
+                        <button type="button" class="btn btn-warning w-100" name="button" id="btn" value="Add" onclick="AddRow()">Add</button>
+                    </td>        
+                </tr>
+            </tbody>
+        </table>
+    </div>
+        
+        <table id="show" class="table mb-5 table-responsive">
+            <thead class="">
+            <tr class="bg-black text-light">
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Address</th>
+                <th>Pincode</th>
+                <th>Gender</th>
+                <th>Food</th>
+                <th>State</th>
+                <th>Country</th>
+            </tr>
+        </thead>
+    </table>
+
+  </body>
+  <!-- MDB -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.js"></script>
+  <script src="script.js"></script>
+</html>
