@@ -1,0 +1,58 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-image: url(./images/bg-2.jpg);
+    background-size: cover;
+}
+header {
+    font-family: 'Bebas Neue', cursive;
+    color: white;
+}
+#characters-container {
+    height : 500px;
+}
+.characters {
+    color: white;
+    width: 10%;
+    height: 480px;
+    background-size: cover;
+    background-position: center;
+    transition: .5s;
+    opacity: 50%;
+    overflow : hidden;
+}
+.characters:hover {
+    height: 500px;
+}
+.table {
+    background-color: rgba(0, 0, 0, 0.521);
+    font-size: 1vw;
+    font-family: 'Bebas Neue', cursive;
+}
+.card-title {
+    margin-right : 100%;
+    font-family: 'Bebas Neue', cursive;
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+    text-align : start;
+    cursor: default;
+    transition: .5s;
+}
+.card-body {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    height: 100%;
+}
+@media (max-width : 750px) {
+    .characters {
+        background-position : -420px;
+    }
+}
+@media (max-width : 750px) {
+    .table {
+        font-size: 1.8vw;
+    }
+}
