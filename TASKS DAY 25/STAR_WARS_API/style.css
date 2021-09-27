@@ -1,0 +1,48 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-image: url(./images/bg.jpg);
+  background-size: cover;
+}
+header {
+  background-color: rgba(0, 0, 0, 0.623);
+  border-bottom: 2px solid #dc3545;
+}
+.logo {
+  width: 300px;
+}
+.films {
+  position: fixed;
+  height: 520px;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.623);
+}
+.film {
+  overflow: hidden;
+  background-color: rgb(27, 27, 27);
+}
+.film div {
+  overflow: auto;
+  max-height: 350px;
+}
+.collapse {
+  overflow: hidden;
+}
+.film div::-webkit-scrollbar {
+  width: 5px;
+}
+.film div::-webkit-scrollbar-track {
+  background: #181818;
+}
+.film div::-webkit-scrollbar-thumb {
+  background: #ffa900;
+}
+.table th {
+  color: white;
+}
+.table td {
+  color: rgb(139, 139, 139);
+}
