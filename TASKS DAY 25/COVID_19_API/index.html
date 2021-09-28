@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>COVID-19 STATS</title>
+    <!-- Font Awesome -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+      rel="stylesheet"
+    />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- MDB -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.css"
+      rel="stylesheet"
+    />
+    <!-- Local style sheet -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body onload="loadCovidData()">
+    <div class="container-fluid p-0 m-0">
+      <header class="p-5 m-0 text-center">
+        <h1 class="display-1 text-light mb-5">COVID-19 GLOBAL STATS</h1>
+        <div class="row">
+          <div class="input-group d-flex justify-content-center">
+            <div class="form-outline bg-light rounded">
+              <input
+                id="search-input"
+                type="search"
+                class="form-control"
+                onkeyup="onSearch()"
+                placeholder="Search for a country"
+              />
+            </div>
+            <button
+              id="search-button"
+              type="button"
+              class="btn btn-dark"
+              onclick="onSearch()"
+            >
+              <i class="fas fa-search"></i>
+            </button>
+          </div>
+        </div>
+      </header>
+
+      <div class="d-flex table-div">
+        <table
+          class="table bg-light table-striped table-responsive table-hover"
+        >
+          <thead class="bg-dark text-light">
+            <th>Country</th>
+            <th>Capital</th>
+            <th>Continent</th>
+            <th>Location</th>
+            <th>Population</th>
+            <th>Confirmed Cases</th>
+            <th>Deaths</th>
+            <th>Recovered</th>
+          </thead>
+          <tbody id="countryDetails" class="bg-light">
+            <!-- All Country Details -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </body>
+
+  <!-- MDB -->
+  <script
+    type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.js"
+  ></script>
+  <!-- local script file -->
+  <script src="script.js"></script>
+</html>
