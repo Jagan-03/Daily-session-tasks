@@ -1,0 +1,133 @@
+
+1. Creating Tables.
+
+-- users table--
+CREATE TABLE users (id INT, userId INT, student_name VARCHAR(10), email VARCHAR(15));
+
+--Code kata table--
+CREATE TABLE codekata (id INT, userId INT, student_name VARCHAR(10), problems_solved INT, geek_points INT);
+
+--attendance table--
+CREATE TABLE attendance (id INT, userId INT, student_name VARCHAR(10), days_present INT, days_absent INT);
+
+--topics table--
+CREATE TABLE topics (id INT, batch VARCHAR(10), topics_covered VARCHAR(100), topics_pending VARCHAR(100));
+
+--tasks--
+CREATE TABLE tasks (id INT, student_name VARCHAR(10), tasks_completed INT, tasks_pending INT);
+
+--company_drives table--
+CREATE TABLE company_drives (id INT, userId INT, total_company_drives INT, company_drives_attended INT);
+
+--mentors table--
+CREATE TABLE mentor (id INT, mentorId INT, name VARCHAR(20), students_assigned INT);
+
+--students_activated-courses table--
+CREATE TABLE students_activated-courses (id INT, userId INT, student_name VARCHAR(10), courses_activated VARCHAR(100));
+
+--courses table--
+CREATE TABLE courses (id INT, course_name VARCHAR(50), course_price INT, course_duration VARCHAR(20));
+
+2. Inserting Values.
+
+-- users table--
+INSERT INTO users (id, userId, student_name, email) VALUES 
+(1, 1, "Thomas", "thomas@gmail.com"), 
+(2, 2, "John", "jhon@gmail.com"), 
+(3, 3, "Arthur", "arthur@gmail.com"), 
+(4, 4, "Ada", "ada@gmail.com"), 
+(5, 5, "Alfie", "alfie@gmail.com");
+
+--Codekata table--
+INSERT INTO codekata (id, userId, student_name, problems_solved, geek_points) VALUES 
+(1, 1, "Thomas", 100, 2000), 
+(2, 2, John", 150, 3000), 
+(3, 3, "Arthur", 300, 5000), 
+(4, 4, "Ada", 200, 3500), 
+(5, 5, "Alfie", 400, 6000);
+
+--attendance table--
+INSERT INTO attendance (id, userId, student_name, days_present, days_absent) VALUES 
+(1, 1, "Thomas", 90, 0), 
+(2, 2, "John", 60, 30),  
+(3, 3, "Arthur", 70, 20),  
+(4, 4, "Ada", 85, 5),  
+(5, 5, "Alfie", 80, 10); 
+
+--topics table--
+INSERT INTO topics (id, batch, topics_covered, topics_pending) VALUES 
+(1, "B21GWD", "HTML, CSS", "BOOSTRAP, NPM, REACT, NODE, EXPRESS, MOGODB"), 
+(2, "B22GWD", "HTML, CSS, BOOSTRAP", "NPM, REACT, NODE, EXPRESS, MOGODB"), 
+(3, "B23GWD", "HTML, CSS, BOOSTRAP, NPM", "REACT, NODE, EXPRESS, MOGODB"), 
+(4, "B24GWD", "HTML, CSS, BOOSTRAP, NPM, REACT", "NODE, EXPRESS, MOGODB"), 
+(5, "B25GWD", "HTML, CSS, BOOSTRAP, NPM, REACT, NODE, EXPRESS", "MOGODB");
+
+--tasks table--
+INSERT INTO tasks (id, student_name, tasks_completed, tasks_pending) VALUES
+(1, "Thomas", 10, 0), 
+(2, "John", 8, 2), 
+(3, "Arthur", 7, 3), 
+(4, "Ada", 9, 1), 
+(5, "Alfie", 5, 5);
+
+--company_drives table--
+INSERT INTO company_drives (id, userId, total_company_drives, company_drives_attended) VALUES
+(1, 1, 5, 3),
+(2, 2, 5, 2),
+(3, 3, 5, 4),
+(4, 4, 5, 1),
+(5, 5, 5, 3);
+
+--mentors table--
+INSERT INTO mentor (id, mentorId, name, students_assigned) VALUES 
+(1, 1, "Stark", 20),
+(2, 2, "Rogers", 22),
+(3, 3, "Bruce", 19),
+(4, 4, "Strange", 30),
+(5, 5, "Peter", 25);
+
+--students_activated-courses table--
+INSERT INTO students_activated-courses (id, userId, student_name, courses_activated) VALUES 
+(1, 1, "Thomas", "Fullstack development, Java"),
+(2, 2, "John", "Java, Python"),
+(3, 3, "Arthur", "Java, C++, Fullstack development"),
+(4, 4, "Ada", "C++, Python, C#"),
+(5, 5, "Alfie", "Java, C++, Python");
+
+--Courses table--
+INSERT INTO courses (id, course_name, course_price, course_duration) VALUES 
+(1, "Fullstack development", 60000, "90 days"),
+(2, "Java", 80000, "100 days"),
+(3, "Python", 40000, "70 days"),
+(4, "C++", 50000, "80 days"),
+(5, "C#", 70000, "50 days");
+
+
+3. Getting the total number of problems solved in Codekata combining all users.
+
+SELECT SUM(problems_solved)
+FROM codekata;
+
+Output => 1150
+
+4. Displaying the number of company drives attended by a user
+
+SELECT 
+    company_drives.userId,
+    users.student_name,
+    company_drives.company_drives_attended
+FROM
+    company_drives
+	INNER JOIN
+    users ON company_drives.userId = users.userId;
+
+6. listing all the mentors
+
+SELECT name FROM mentor;
+
+7. list the number of students that are assigned for a mentor
+
+SELECT name, students_assigned FROM mentor;
+
+
+
