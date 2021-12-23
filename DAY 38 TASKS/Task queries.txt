@@ -1,0 +1,58 @@
+1. Find all the information about each products
+
+const allProducts = db.collection("products").find({}).toArray();
+
+2. Find the product price which are between 400 to 800
+
+const products = db.collection("products").find({"product_price":{$gte:400,$lte:800}}).toArray();
+
+3. Find the product price which are not between 400 to 600
+
+const products = db.collection("products").find({$or : [{"product_price":{$lt:400}}, {"product_price":{$gt:600}}]}).toArray();
+
+4. List the four product which are grater than 500 in price 
+
+const products = db.collection("products").find({"product_price":{$gte:500}}).toArray();
+
+5. Find the product name and product material of each products
+
+const products = db.collection("products").find({}, { projection : { product_name:1, product_material:1 } }).toArray();
+
+6. Find the product with a row id of 10
+
+const products = db.collection("products").find({"id" : "10"}).toArray();
+
+7. Find only the product name and product material (same as no:5)
+
+const products = db.collection("products").find({}, { projection : { product_name:1, product_material:1 } }).toArray();
+
+8. Find all products which contain the value of soft in product material 
+
+const products = db.collection("products").find({"product_material" : /^Soft/}).toArray();
+
+9. Find products which contain product color indigo  and product price 492.00
+
+const products = db.collection("products").find({$and : [{"product_color" : "indigo"}, {"product_price" : 492}]}).toArray();
+
+10. Delete the products which product price value are same
+
+//Getting the count of the duplicates
+const count = db
+    .collection("products")
+    .aggregate([
+      { $group: { _id: "$product_price", count: { $sum: 1 } } },
+      { $project: { count: 1 } },
+    ])
+    .toArray();
+
+//Getting the duplicate product price values
+const duplicate = count
+    .filter((doc) => (doc.count > 1 ? doc : null))
+    .map((doc) => doc._id);
+
+//Filtering out the duplicate from the products
+const products = dbo
+    .collection("products")
+    .find({ product_price: { $nin: duplicate } })
+    .toArray();
+
